@@ -1,0 +1,41 @@
+.tile {
+    background-color: $tileBg;
+    margin: 0 1vw;
+    &#tile-fb {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-fb);
+        }
+    }
+    &#tile-tw {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-tw);
+        }
+    }
+    &#tile-ig {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-ig);
+        }
+    }
+    &#tile-yt {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-yt);
+        }
+    }
+    text-align: center;
+    &__links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // img {
+        // }
+        p {
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
