@@ -1,41 +1,57 @@
 .tile {
     background-color: $tileBg;
-    margin: 0 1vw;
-    &#tile-fb {
-        position: relative;
-        &::before {
-            @include createBorderColor($color-fb);
-        }
-    }
-    &#tile-tw {
-        position: relative;
-        &::before {
-            @include createBorderColor($color-tw);
-        }
-    }
-    &#tile-ig {
-        position: relative;
-        &::before {
-            @include createBorderColor($color-ig);
-        }
-    }
-    &#tile-yt {
-        position: relative;
-        &::before {
-            @include createBorderColor($color-yt);
-        }
-    }
+    margin: 1vw;
     text-align: center;
-    &__links {
+    .tile__links {
         display: flex;
         justify-content: center;
         align-items: center;
-        // img {
-        // }
         p {
             a {
                 text-decoration: none;
             }
         }
+    }
+}
+#main {
+    #tile-fb {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-fb);
+        }
+    }
+    #tile-tw {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-tw);
+        }
+    }
+    #tile-ig {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-ig);
+        }
+    }
+    #tile-yt {
+        position: relative;
+        &::before {
+            @include createBorderColor($color-yt);
+        }
+    }
+}
+#overview {
+    .tile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        img {
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}
+@media (min-width: $largerThenLaptop) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1vw;
+    .title {
+        text-align: center;
+    }
+}
+@media (min-width: $largerThenLaptop) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+            text-align: left;
+        }
+    }
+}
